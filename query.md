@@ -21,7 +21,7 @@ WHERE `cfu` > 10;
 SELECT * 
 FROM `students`
 WHERE YEAR(CURRENT_DATE()) - YEAR(`date_of_birth`) > 30;
-<!-- CURRENT_DATE() is a function for keep current date. -->
+<!-- CURRENT_DATE() is a function to get current date. -->
 
 4. 
 SELECT * 
@@ -53,3 +53,5 @@ SELECT *
 FROM `teachers`
 WHERE `phone`
 IS NULL;
+
+

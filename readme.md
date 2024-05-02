@@ -70,3 +70,18 @@ method | VARCHAR(50) | NOTNULL
 date | DATETIME | NOTNULL
 session | VARCHAR(35) | NULL
 professor_presence | TINYINT | NOTNULL
+
+
+<!--  Selezionare a quale dipartimento appartiene il Corso di Laurea in Diritto dell'Economia (Dipartimento di Scienze politiche, giuridiche e studi internazionali) -->
+
+SELECT *
+FROM `departments`
+JOIN  `degrees` ON `degrees`.`department_id`= departments.id
+WHERE `degrees`.`name` = "Corso di Laurea in Diritto dell'Economia";
+
+<!-- VOGLIO SELEZIONARE SOLO I CAMPI DI "DEPARTMENTS" (TUTTI I CAMPI) -->
+
+SELECT `departments`. *   <!-- <-- -->
+FROM `departments`
+JOIN  `degrees` ON `degrees`.`department_id`= departments.id
+WHERE `degrees`.`name` = "Corso di Laurea in Diritto dell'Economia";
